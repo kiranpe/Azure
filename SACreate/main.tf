@@ -11,6 +11,14 @@ terraform {
       source  = "hashicorp/random"
     }
   }
+  
+  #Backend to store terraform state file
+  #backend "azurerm" {
+  #  resource_group_name  = "lab-rg1"
+  #  storage_account_name = "kiransalabrg1"
+  #  container_name       = "tfstate"
+  #  key                  = "terraform.tfstate"
+  #}
 }
 
 provider "azurerm" {
