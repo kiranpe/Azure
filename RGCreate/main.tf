@@ -20,6 +20,9 @@ provider "azurerm" {
   features {}
 }
 
+data "azurerm_client_config" "current" {
+}
+
 resource "azurerm_resource_group" "rg" {
     name = var.rg_name
     location = var.rg_loc
@@ -34,5 +37,5 @@ output "tenant_id" {
 }
 
 output "rg_id" {
-  value = data.azurerm_resource_group.rg.id
+  value = azurerm_resource_group.rg.id
 }
