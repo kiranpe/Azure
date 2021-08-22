@@ -1,4 +1,4 @@
-#Local Values
+#Local Values Configuration
 
 locals {
   common_tags = {
