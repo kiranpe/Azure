@@ -1,3 +1,5 @@
+#Terraform and Azure Providers Configuration
+
 terraform {
   required_version = ">=1.0.0"
   required_providers {
