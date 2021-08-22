@@ -26,8 +26,8 @@ resource "azurerm_network_security_group" "mysecgrp" {
       protocol                   = security_rule.value[4] == "" ? "Tcp" : security_rule.value[4]
       source_port_range          = "*"
       destination_port_range     = security_rule.value[5]
-      source_address_prefix      = security_rule.value[6] == "" ? "" : security_rule.value[6] 
-      destination_address_prefix = security_rule.value[7] == "" ? "" : security_rule.value[7]
+      source_address_prefix      = security_rule.value[6] == "" ? "*" : security_rule.value[6] 
+      destination_address_prefix = security_rule.value[7] == "" ? "*" : security_rule.value[7]
       description                = "rule_${security_rule.value[0]}_${security_rule.value[5]}"
     }
   }
