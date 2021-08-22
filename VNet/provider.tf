@@ -1,4 +1,4 @@
-#Terraform and Azure Providers Configuration
+#Terraform Providers Configuration
 
 terraform {
   required_version = ">=1.0.0"
@@ -14,6 +14,8 @@ terraform {
     }
   }
 }
+
+#Azure Provider Configuration
 
 provider "azurerm" {
   features {}
