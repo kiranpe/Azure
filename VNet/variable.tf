@@ -1,3 +1,5 @@
+#Variables Configuration
+
 variable "rg_name" {
   default = "kiranRG"
 }
